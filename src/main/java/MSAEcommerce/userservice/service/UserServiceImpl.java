@@ -29,9 +29,7 @@ public class UserServiceImpl implements UserService {
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         UserEntity userEntity = mapper.map(userDto, UserEntity.class);
         userEntity.setEncryptedPwd(passwordEncoder.encode(userDto.getPwd()));
-
         userRepository.save(userEntity);
-
         UserDto returnUserDto = mapper.map(userEntity, UserDto.class);
 
         return returnUserDto;

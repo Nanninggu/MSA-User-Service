@@ -24,6 +24,6 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka
 
-# Controller에서 호출 테스트
+# Controller에서 호출 테스트, git test
 greeting:
   message: Welcome to the Simple E-commerce-Service.
